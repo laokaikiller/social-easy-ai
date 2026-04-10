@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -14,255 +13,138 @@
             padding: 20px;
             color: #333;
         }
-        h1 {
-            text-align: center;
-            color: #1a1a1a;
-        }
-        h2 {
-            color: #0066cc;
-            margin-top: 30px;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 10px;
-        }
-        .update-date {
-            text-align: center;
-            color: #666;
-            font-size: 14px;
-            margin-bottom: 30px;
-        }
-        ul {
-            padding-left: 25px;
-        }
-        li {
-            margin-bottom: 8px;
-        }
-        .lang-switch {
-            text-align: center;
-            margin: 20px 0;
-        }
-        .lang-switch a {
-            color: #0066cc;
-            margin: 0 10px;
-            text-decoration: none;
-        }
-        .lang-switch a:hover {
-            text-decoration: underline;
-        }
-        .zh-content, .en-content {
-            display: none;
-        }
-        body.zh .zh-content {
-            display: block;
-        }
-        body.en .en-content {
-            display: block;
-        }
-        body.zh .en-only {
-            display: none;
-        }
-        body.en .zh-only {
-            display: none;
-        }
+        h1 { text-align: center; color: #1a1a1a; }
+        h2 { color: #0066cc; margin-top: 30px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        .update-date { text-align: center; color: #666; font-size: 14px; margin-bottom: 30px; }
+        ul { padding-left: 25px; }
+        li { margin-bottom: 8px; }
+        .lang-switch { text-align: center; margin: 20px 0; }
+        .lang-switch a { color: #0066cc; margin: 0 10px; text-decoration: none; }
+        .lang-switch a:hover { text-decoration: underline; }
+        .zh-content, .en-content { display: none; }
+        .zh-content { display: block; } /* 默认显示中文 */
+        body.en .zh-content { display: none; }
+        body.en .en-content { display: block; }
     </style>
 </head>
 <body>
     <div class="lang-switch">
-        <a href="#" onclick="switchLang('zh'); return false;">中文</a> |
-        <a href="#" onclick="switchLang('en'); return false;">English</a>
+        <a href="#" onclick="document.body.className='zh';localStorage.setItem('privacyLang','zh');return false;">中文</a> |
+        <a href="#" onclick="document.body.className='en';localStorage.setItem('privacyLang','en');return false;">English</a>
     </div>
 
-    <!-- Chinese Version -->
     <div class="zh-content">
         <h1>隐私政策</h1>
         <p class="update-date">最后更新日期：2026年1月1日</p>
-
         <p>欢迎您使用"社牛AI"应用。我们深知个人信息对您的重要性，并会尽全力保护您的个人信息安全。本隐私政策旨在向您说明我们如何收集、使用、存储和保护您的个人信息。</p>
 
         <h2>一、信息收集与使用</h2>
-        <p>我们可能会收集以下类型的信息：</p>
-        
         <h3>1. 您主动提供的信息</h3>
         <ul>
             <li><strong>账户信息</strong>：当您使用 Google 账户或 Apple 账户登录时，我们会获取您的姓名、电子邮件地址和头像。</li>
             <li><strong>个人资料</strong>：您主动填写的生日、职业、兴趣爱好、语言风格样本等信息。</li>
             <li><strong>聊天内容</strong>：您与 AI 助手的对话内容，用于提供社交沟通建议。</li>
         </ul>
-
         <h3>2. 自动收集的信息</h3>
         <ul>
             <li><strong>设备信息</strong>：设备型号、操作系统版本、唯一设备标识符。</li>
-            <li><strong>使用数据</strong>：应用功能使用情况、使用频率、使用时长等，用于改善用户体验。</li>
-            <li><strong>订阅信息</strong>：App Store 订阅状态和订阅类型，用于识别付费用户。</li>
+            <li><strong>使用数据</strong>：应用功能使用情况、使用频率、使用时长等。</li>
+            <li><strong>订阅信息</strong>：App Store 订阅状态和订阅类型。</li>
         </ul>
 
         <h2>二、第三方服务</h2>
-        <p>我们使用以下第三方服务，它们可能会按照其隐私政策处理您的数据：</p>
-
         <h3>1. Firebase（Google）</h3>
-        <p>我们使用 Firebase 进行用户认证和数据存储。Firebase 的隐私政策：<a href="https://firebase.google.com/support/privacy" target="_blank">https://firebase.google.com/support/privacy</a></p>
-        <p>Firebase 可能收集的数据包括：设备标识符、使用日志、崩溃报告等。</p>
-
+        <p>隐私政策：<a href="https://firebase.google.com/support/privacy" target="_blank">https://firebase.google.com/support/privacy</a></p>
         <h3>2. Google Sign-In</h3>
-        <p>我们提供 Google 账户登录功能。Google 的隐私政策：<a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></p>
-
+        <p>隐私政策：<a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></p>
         <h3>3. Apple Sign-In</h3>
-        <p>在 iOS 设备上，我们提供 Apple 账户登录功能。Apple 的隐私政策：<a href="https://www.apple.com/legal/privacy" target="_blank">https://www.apple.com/legal/privacy</a></p>
-
+        <p>隐私政策：<a href="https://www.apple.com/legal/privacy" target="_blank">https://www.apple.com/legal/privacy</a></p>
         <h3>4. RevenueCat</h3>
-        <p>我们使用 RevenueCat 管理应用内订阅。RevenueCat 的隐私政策：<a href="https://www.revenuecat.com/privacy" target="_blank">https://www.revenuecat.com/privacy</a></p>
-        <p>RevenueCat 可能收集的数据包括：设备标识符、订阅交易信息、应用内购买记录。</p>
+        <p>隐私政策：<a href="https://www.revenuecat.com/privacy" target="_blank">https://www.revenuecat.com/privacy</a></p>
 
         <h2>三、信息存储与保护</h2>
         <ul>
             <li>您的个人信息存储在 Firebase 提供的安全服务器上。</li>
-            <li>我们采用行业标准的安全措施保护您的数据，包括数据加密传输和存储。</li>
-            <li>您的敏感个人信息（如聊天记录）会进行脱敏处理后存储。</li>
+            <li>我们采用行业标准的安全措施保护您的数据。</li>
         </ul>
 
         <h2>四、信息共享</h2>
-        <p>除以下情况外，我们不会与第三方共享您的个人信息：</p>
-        <ul>
-            <li>获得您的明确同意。</li>
-            <li>根据法律法规要求或政府主管部门的强制性要求。</li>
-            <li>为保护我们的合法权益而必需。</li>
-        </ul>
+        <p>除法律法规要求或保护合法权益外，我们不会与第三方共享您的个人信息。</p>
 
         <h2>五、您的权利</h2>
-        <p>根据适用法律，您享有以下权利：</p>
-        <ul>
-            <li><strong>访问权</strong>：您有权访问我们持有的关于您的个人信息。</li>
-            <li><strong>更正权</strong>：您有权要求更正不准确的个人信息。</li>
-            <li><strong>删除权</strong>：您有权要求删除您的个人信息。</li>
-            <li><strong>撤回同意权</strong>：您有权随时撤回您之前给予的同意。</li>
-            <li><strong>数据导出权</strong>：您有权获取您个人信息的副本。</li>
-        </ul>
+        <p>您享有访问权、更正权、删除权、撤回同意权和数据导出权。</p>
 
         <h2>六、订阅与退款</h2>
-        <ul>
-            <li>订阅服务由 App Store 提供管理。</li>
-            <li>订阅会自动续期，除非您在当前订阅期结束前至少24小时关闭自动续期。</li>
-            <li>您可以通过设备的"设置"页面管理或取消订阅。</li>
-            <li>如需退款，请联系 App Store 支持。</li>
-        </ul>
+        <p>订阅由 App Store 管理，可通过设备设置取消。如需退款请联系 App Store 支持。</p>
 
         <h2>七、未成年人保护</h2>
-        <p>我们非常重视对未成年人信息的保护。如果您是未满18岁的未成年人，请在监护人的陪同下阅读本隐私政策，并在取得监护人的同意后使用我们的服务。</p>
+        <p>未满18岁用户需在监护人陪同下使用服务并取得同意。</p>
 
         <h2>八、隐私政策更新</h2>
-        <p>我们可能会不时更新本隐私政策。更新后的隐私政策将在本页面上公布。如果更新涉及重大变更，我们将通过应用内通知或邮件的方式通知您。</p>
+        <p>我们可能会不时更新本隐私政策，更新内容将在此页面公布。</p>
 
         <h2>九、联系我们</h2>
-        <p>如果您对本隐私政策有任何疑问或建议，请通过以下方式联系我们：</p>
-        <p>电子邮件：laokaikiller@gamil.com</p>
+        <p>电子邮件：laokaikiller@gmail.com</p>
 
-        <p style="margin-top: 50px; text-align: center; color: #999; font-size: 12px;">
-            © 2026 社牛AI. 保留所有权利。
-        </p>
+        <p style="margin-top:50px;text-align:center;color:#999;font-size:12px;">© 2026 社牛AI. 保留所有权利。</p>
     </div>
 
-    <!-- English Version -->
     <div class="en-content">
         <h1>Privacy Policy</h1>
         <p class="update-date">Last Updated: January 1, 2026</p>
-
-        <p>Welcome to "Social Easy AI". We understand the importance of your personal information and are committed to protecting your personal data. This Privacy Policy explains how we collect, use, store, and protect your personal information.</p>
+        <p>Welcome to "Social Easy AI". We understand the importance of your personal information and are committed to protecting your personal data.</p>
 
         <h2>1. Information Collection and Use</h2>
-        <p>We may collect the following types of information:</p>
-        
         <h3>1. Information You Provide</h3>
         <ul>
-            <li><strong>Account Information</strong>: When you sign in with Google or Apple account, we collect your name, email address, and profile picture.</li>
-            <li><strong>Profile Information</strong>: Birthday, occupation, hobbies, language style samples, and other information you voluntarily provide.</li>
-            <li><strong>Chat Content</strong>: Your conversations with the AI assistant for providing social communication advice.</li>
+            <li><strong>Account Information</strong>: Name, email, and profile picture from Google or Apple sign-in.</li>
+            <li><strong>Profile Information</strong>: Birthday, occupation, hobbies, language style samples, etc.</li>
+            <li><strong>Chat Content</strong>: Conversations with AI for social advice.</li>
         </ul>
-
         <h3>2. Automatically Collected Information</h3>
         <ul>
-            <li><strong>Device Information</strong>: Device model, operating system version, unique device identifiers.</li>
-            <li><strong>Usage Data</strong>: App feature usage, frequency, duration, etc., to improve user experience.</li>
-            <li><strong>Subscription Information</strong>: App Store subscription status and type to identify paying users.</li>
+            <li><strong>Device Information</strong>: Device model, OS version, unique identifiers.</li>
+            <li><strong>Usage Data</strong>: App feature usage, frequency, duration.</li>
+            <li><strong>Subscription Information</strong>: App Store subscription status.</li>
         </ul>
 
         <h2>2. Third-Party Services</h2>
-        <p>We use the following third-party services that may process your data according to their privacy policies:</p>
-
         <h3>1. Firebase (Google)</h3>
-        <p>We use Firebase for user authentication and data storage. Firebase Privacy Policy: <a href="https://firebase.google.com/support/privacy" target="_blank">https://firebase.google.com/support/privacy</a></p>
-        <p>Firebase may collect: device identifiers, usage logs, crash reports, etc.</p>
-
+        <p>Privacy Policy: <a href="https://firebase.google.com/support/privacy" target="_blank">https://firebase.google.com/support/privacy</a></p>
         <h3>2. Google Sign-In</h3>
-        <p>We provide Google account login. Google Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></p>
-
+        <p>Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></p>
         <h3>3. Apple Sign-In</h3>
-        <p>On iOS devices, we provide Apple account login. Apple Privacy Policy: <a href="https://www.apple.com/legal/privacy" target="_blank">https://www.apple.com/legal/privacy</a></p>
-
+        <p>Privacy Policy: <a href="https://www.apple.com/legal/privacy" target="_blank">https://www.apple.com/legal/privacy</a></p>
         <h3>4. RevenueCat</h3>
-        <p>We use RevenueCat for in-app subscription management. RevenueCat Privacy Policy: <a href="https://www.revenuecat.com/privacy" target="_blank">https://www.revenuecat.com/privacy</a></p>
-        <p>RevenueCat may collect: device identifiers, subscription transaction information, in-app purchase records.</p>
+        <p>Privacy Policy: <a href="https://www.revenuecat.com/privacy" target="_blank">https://www.revenuecat.com/privacy</a></p>
 
         <h2>3. Data Storage and Security</h2>
-        <ul>
-            <li>Your personal information is stored on secure servers provided by Firebase.</li>
-            <li>We use industry-standard security measures including data encryption in transit and at rest.</li>
-            <li>Your sensitive personal information (such as chat records) is stored after desensitization processing.</li>
-        </ul>
+        <p>Your personal information is stored on secure Firebase servers with industry-standard encryption.</p>
 
         <h2>4. Information Sharing</h2>
-        <p>We do not share your personal information with third parties except:</p>
-        <ul>
-            <li>With your explicit consent.</li>
-            <li>As required by law or government regulations.</li>
-            <li>When necessary to protect our legitimate rights.</li>
-        </ul>
+        <p>We do not share your personal information except with your consent or as required by law.</p>
 
         <h2>5. Your Rights</h2>
-        <p>Under applicable laws, you have the following rights:</p>
-        <ul>
-            <li><strong>Access Right</strong>: You have the right to access your personal information we hold.</li>
-            <li><strong>Correction Right</strong>: You have the right to request correction of inaccurate personal information.</li>
-            <li><strong>Deletion Right</strong>: You have the right to request deletion of your personal information.</li>
-            <li><strong>Withdraw Consent</strong>: You have the right to withdraw your consent at any time.</li>
-            <li><strong>Data Portability</strong>: You have the right to obtain a copy of your personal information.</li>
-        </ul>
+        <p>You have the right to access, correct, delete your data, withdraw consent, and export your data.</p>
 
         <h2>6. Subscription and Refunds</h2>
-        <ul>
-            <li>Subscriptions are managed by the App Store.</li>
-            <li>Subscriptions auto-renew unless cancelled at least 24 hours before the end of the current period.</li>
-            <li>You can manage or cancel subscriptions through your device's Settings.</li>
-            <li>For refunds, please contact App Store Support.</li>
-        </ul>
+        <p>Subscriptions are managed by App Store. Cancel anytime via device Settings. Contact App Store Support for refunds.</p>
 
         <h2>7. Children's Privacy</h2>
-        <p>We take children's privacy seriously. If you are under 18, please read this Privacy Policy with a guardian and obtain their consent before using our services.</p>
+        <p>Users under 18 should use the service with guardian consent.</p>
 
         <h2>8. Policy Updates</h2>
-        <p>We may update this Privacy Policy from time to time. Updated policies will be posted on this page. For significant changes, we will notify you via in-app notification or email.</p>
+        <p>We may update this policy periodically. Updates will be posted on this page.</p>
 
         <h2>9. Contact Us</h2>
-        <p>If you have any questions or suggestions about this Privacy Policy, please contact us:</p>
         <p>Email: laokaikiller@gmail.com</p>
 
-        <p style="margin-top: 50px; text-align: center; color: #999; font-size: 12px;">
-            © 2026 Social Easy AI. All rights reserved.
-        </p>
+        <p style="margin-top:50px;text-align:center;color:#999;font-size:12px;">© 2026 Social Easy AI. All rights reserved.</p>
     </div>
 
     <script>
-        function getDefaultLang() {
-            var lang = navigator.language || navigator.userLanguage || 'zh';
-            return lang.toLowerCase().startsWith('en') ? 'en' : 'zh';
-        }
-
-        function switchLang(lang) {
-            document.body.className = lang;
-            localStorage.setItem('privacyLang', lang);
-        }
-
-        var savedLang = localStorage.getItem('privacyLang');
-        var defaultLang = savedLang || getDefaultLang();
-        document.body.className = defaultLang;
+        var saved=localStorage.getItem('privacyLang');
+        if(saved==='en')document.body.className='en';
     </script>
 </body>
 </html>
