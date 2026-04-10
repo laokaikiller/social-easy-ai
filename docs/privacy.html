@@ -143,8 +143,18 @@
     </div>
 
     <script>
-        var saved=localStorage.getItem('privacyLang');
-        if(saved==='en')document.body.className='en';
+        function getLangFromUrl() {
+            var params = new URLSearchParams(window.location.search);
+            return params.get('lang');
+        }
+        var saved = localStorage.getItem('privacyLang');
+        var urlLang = getLangFromUrl();
+        if (urlLang) {
+            localStorage.setItem('privacyLang', urlLang);
+            document.body.className = urlLang;
+        } else if (saved === 'en') {
+            document.body.className = 'en';
+        }
     </script>
 </body>
 </html>
