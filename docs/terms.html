@@ -196,8 +196,18 @@
     </div>
 
     <script>
-        var saved=localStorage.getItem('termsLang');
-        if(saved==='en')document.body.className='en';
+        function getLangFromUrl() {
+            var params = new URLSearchParams(window.location.search);
+            return params.get('lang');
+        }
+        var saved = localStorage.getItem('termsLang');
+        var urlLang = getLangFromUrl();
+        if (urlLang) {
+            localStorage.setItem('termsLang', urlLang);
+            document.body.className = urlLang;
+        } else if (saved === 'en') {
+            document.body.className = 'en';
+        }
     </script>
 </body>
 </html>
